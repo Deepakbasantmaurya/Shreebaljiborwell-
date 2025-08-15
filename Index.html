@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shree Balaji Borewell</title>
+<style>
+    /* Full screen background */
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        background: url('https://images.unsplash.com/photo-1581093588401-03d0d4b5f1cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8Ym9yZXdlbGx8fHx8fDE2OTIwMjQ3MzM&ixlib=rb-4.0.3&q=80&w=1080') no-repeat center center/cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Arial', sans-serif;
+    }
+
+    /* Overlay */
+    .overlay {
+        background-color: rgba(0, 0, 0, 0.65);
+        padding: 40px 30px;
+        border-radius: 15px;
+        text-align: center;
+        color: #fff;
+        animation: fadeIn 2s ease-in-out;
+        max-width: 90%;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        animation: slideDown 1.5s ease-out;
+    }
+
+    p {
+        font-size: 1.2rem;
+        animation: fadeInText 2s ease-in;
+    }
+
+    /* Button */
+    .go-button {
+        margin-top: 20px;
+        padding: 12px 25px;
+        font-size: 1rem;
+        background-color: #ff9800;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+    .go-button:hover {
+        background-color: #e68900;
+    }
+
+    /* Loader animation */
+    .loader {
+        margin: 20px auto 0;
+        border: 5px solid #f3f3f3;
+        border-top: 5px solid #ff9800;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 1s linear infinite;
+    }
+
+    /* Animations */
+    @keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
+    @keyframes slideDown { from {transform: translateY(-50px); opacity: 0;} to {transform: translateY(0); opacity: 1;} }
+    @keyframes fadeInText { from {opacity: 0;} to {opacity: 1;} }
+    @keyframes spin { 0% { transform: rotate(0deg);} 100% { transform: rotate(360deg);} }
+
+    /* Responsive */
+    @media(max-width: 600px){
+        h1 { font-size: 1.8rem; }
+        p { font-size: 1rem; }
+        .overlay { padding: 30px 20px; }
+    }
+</style>
+
+<script>
+    // Redirect after 3 seconds
+    setTimeout(function() {
+        window.location.href = "https://borwellproject.infinityfreeapp.com/";
+    }, 3000);
+
+    // Immediate redirect on button click
+    function goNow() {
+        window.location.href = "https://borwellproject.infinityfreeapp.com/";
+    }
+</script>
+</head>
+<body>
+    <div class="overlay">
+        <h1>Welcome to Shree Balaji Borewell</h1>
+        <p>Drilling Services for your needs</p>
+        <p>Redirecting to our main site...</p>
+        <button class="go-button" onclick="goNow()">Go to Site Now</button>
+        <div class="loader"></div>
+    </div>
+</body>
+</html>
